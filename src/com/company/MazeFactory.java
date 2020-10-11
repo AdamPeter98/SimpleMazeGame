@@ -8,7 +8,7 @@ public class MazeFactory implements AbstractFactory {
 
     @Override
     public Room makeRoom(int roomNr, int x, int y) {
-        return new Room(roomNr,x,y);
+        return new Room(roomNr, x, y);
     }
 
     @Override
@@ -18,5 +18,6 @@ public class MazeFactory implements AbstractFactory {
 
     @Override
     public Door makeDoor(Room r1, Room r2, String code, int x, int y, boolean open) {
-        return new Door(r1, r2, code, x, y, open);    }
+        return new Door(r1, r2, code, x, y, open);
+    }
 }

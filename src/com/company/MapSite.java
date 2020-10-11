@@ -4,7 +4,8 @@ import javax.swing.*;
 
 public class MapSite extends JPanel {
 
-    public void enter(){}
+    public void enter() {
+    }
 
 
 }

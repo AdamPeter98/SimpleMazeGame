@@ -19,8 +19,22 @@ public class Player extends JPanel implements KeyListener {
         r.add(this);
     }
 
+
+
     private void move(Direction direction){
+
+
+
+
         MapSite p = current.getSide(direction);
+        System.out.println(current.getY());
+        System.out.println(current.getX());
+
+        if(current.getX() == 160 && current.getY() == 160){
+            System.out.println("You found a real treasure");
+        }
+
+
         if (p instanceof Wall){
             System.out.println("Ouch, wall!");
         }
@@ -29,6 +43,7 @@ public class Player extends JPanel implements KeyListener {
                 current.remove(this);
                 current.repaint();
                 current = ((Door)p).OtherSideFrom(current);
+
                 current.add(this);
                 current.repaint();
             }
@@ -43,10 +58,10 @@ public class Player extends JPanel implements KeyListener {
                     current.add(this);
                     current.repaint();
                     ((Door)p).isOpen = true;
+                }else {
+                    System.out.println("Wrong codeq");
                 }
-                else {
-                    System.out.println("Nem jo a valasz");
-                }
+
             }
         }
     }

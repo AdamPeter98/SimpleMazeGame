@@ -1,15 +1,12 @@
 package com.company;
 
-import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
-import java.awt.event.WindowListener;
 
-public class Room  extends  MapSite{
+public class Room extends MapSite {
     private int roomNumber;
-    public static final Color ROOM_COLOR = new Color(192,192,192);
-    public static final Color WALL_COLOR = new Color(47,79,79);
-
+    public static final Color ROOM_COLOR = new Color(192, 192, 192);
+    public static final Color WALL_COLOR = new Color(0, 0, 0);
 
 
     private MapSite north;
@@ -21,15 +18,15 @@ public class Room  extends  MapSite{
     public Room(int roomNr, int x, int y) {
 
         roomNumber = roomNr;
-        this.setBounds(x,y, 37,37);
-        this.setBorder(new MatteBorder(4,4,4,4,WALL_COLOR));
+        this.setBounds(x, y, 38, 38);
+        this.setBorder(new MatteBorder(4, 4, 4, 4, WALL_COLOR));
         this.setBackground(ROOM_COLOR);
-        System.out.println("Room " + roomNumber + " created");
+
     }
 
     public void enter() {
 
-        System.out.println("You enterd in a room");
+        System.out.println("You entered in a room");
     }
 
 
@@ -44,7 +41,6 @@ public class Room  extends  MapSite{
         } else if (d == Direction.West) {
             west = site;
         }
-        //System.out.println("setting " + d.toString() + " side of " + this.toString() + " to " + site.toString());
     }
 
     public int getRoomNumber() {
@@ -66,7 +62,6 @@ public class Room  extends  MapSite{
         }
 
         return result;
-
 
 
     }
